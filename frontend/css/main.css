@@ -1,0 +1,113 @@
+:root{
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color:rgb(201, 208, 230);
+    --ambient-color:rgb(78, 86, 114);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background:var(--primary-color);
+}
+
+.screen{
+    background: transparent;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+.left-side{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.right-side{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    gap: 20px;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 300px;
+   gap: 20px;
+}
+
+.login-container h1{
+    text-align: center;
+}
+
+.user-name, .password{
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    
+}
+
+.user-name input, .password input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    height: 100%;
+    font-size: 20px;
+    padding-bottom: none;
+    
+}
+
+.user-name input::placeholder, .password input::placeholder{
+    color: black;
+    font-size: 18px;
+}
+
+.login-btn{
+    height:40px;
+    cursor: pointer;
+    background: var(--ambient-color);
+    color: var(--primary-color);
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.right-side p{
+    text-align: center;
+}
+
+.right-side p a{
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+
+.pat-log-container{
+    display: none;
+    flex-direction: column;
+    height: 400px;
+    width: 300px;
+   gap: 20px;
+   
+}
+
+.pat-log-container h1{
+    text-align: center;
+}

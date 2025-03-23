@@ -1,0 +1,402 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/newNisBackground.jpg');
+    background-repeat: no-repeat;    
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    
+}.head{
+    position:fixed;
+    top: 0;    
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background:linear-gradient(135deg, #7ebee5, #2d7edb);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    display:flex;
+    height: 10vh;
+
+}
+
+.logoDiv{
+    display: flex;
+    gap: 0;
+    align-items: center;
+    gap: 5px;
+}
+
+.headerLogo{
+    width: 50px;
+    height: 50px;
+    margin-top: 2px;
+    padding: 0%;
+    border-radius: 0px 75px 75px 0px; 
+    left: 0;
+    float: left;   
+    border-radius: 10px;
+    
+}
+  
+h2{
+    color: rgb(12, 12, 12);
+}
+
+  .navigation{
+    display: flex;
+    align-items:center;
+    background: transparent;
+    justify-content: space-between;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 20px;
+    height: 50px;  
+   
+}.navigation a{ 
+position:relative;
+font-size: 1.1em;
+color: #0c0c0c;
+text-decoration: none;
+font-weight: bold;
+margin-left: 30px;
+
+}.navigation a::after{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #0c0c0c;
+    border-radius: 5px;
+    transform: scaleX(0);
+}
+
+.navigation a:hover::after{
+    
+    transform: scaleX(1);
+    transition: transform .5s;
+}
+.navigation .navButton{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #0c0c0c;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #0c0c0c;
+    font-weight: bold;
+    margin-left: 40px;
+    transition: .5s;
+   
+}
+.navigation .navButton:hover{
+    background: #0c0c0c;
+    color: #cfd2d4;
+}.input .icon{
+    
+    position: absolute; 
+    top: 5px; 
+    right: 5px;
+    cursor: pointer; 
+    font-size: 20px; 
+    color: rgb(238, 238, 243);
+    background-color: #1c1e21;
+    border-radius: 15px;
+} 
+  
+.input{
+    display: none;
+    background:white;
+    height: 350px;
+    width: 300px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.upperInput{
+    background-color: #395474;
+}
+
+.userNameLog, .passwordLog{
+    background: transparent;
+    height: 40px;
+    width: 70%;
+    border-bottom: 1px solid black;
+    padding-bottom: none;
+}
+
+#loginUname{
+    margin: 5px 5px 0 5px;
+    background-color: transparent;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+#uname::placeholder{
+    color: gray;
+    font-weight: bold;
+}
+
+#loginPass{
+    margin: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+
+}
+#pass::placeholder{
+    color:  gray;
+    font-weight: bold;
+    
+}
+#userLogin{
+    margin-top: 20px;
+    background-color:  rgb(0, 26, 61);
+    border-radius: 3px;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-size: 20px;
+    color: white;
+}
+#userLogin:hover{
+background: rgb(0, 24, 56);
+}
+.logtxt{
+    color: rgb(2, 17, 37);
+    margin-top: 20px;
+}
+.regOrLogBtn{
+    color:rgb(13, 75, 245);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background:transparent;
+}.h5{
+    color: rgb(12, 13, 13);
+    font-size: medium;
+}
+.user{
+    color: rgb(21, 21, 23);
+    font-weight: bold;
+    border:none;
+    cursor: pointer;
+}
+#login{
+    color: rgb(12, 13, 13);
+    font-size: medium;
+
+    /*Registratioj*/
+}
+.container{
+    background:linear-gradient(135deg, #7ebee5, #05175f);
+    padding: 25px 30px;
+    max-width: 700px;
+    width: 100%;
+    max-height: 80vh;
+    border-radius: 5px;
+    margin-top: 50px;
+    display: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    border: solid 5px rgb(0, 110, 255);
+}
+.container::-webkit-scrollbar{
+    width: 8px;
+}
+.container::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+}
+.container .regTxt{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .regTxt::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #7ebee5, #05175f);
+    
+}
+.container .regInputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+.regInputs .inputVal{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.inputName{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+}
+.regInputs .inputVal input{
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(51, 6, 232);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.regInputs .inputVal input:focus,
+.regInputs .inputVal input:valid{
+    border-color: rgb(0, 72, 255);
+}
+.container .button{
+    height: 45px;
+    margin: 45px 0;
+}
+.container .button button{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: white;
+    background:rgb(0, 26, 61);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    top: 0;
+}
+.container .button button:hover{
+    background: rgb(16, 151, 224);
+}
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    .regInputs .inputVal{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    
+}
+.selectGender{
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.regSelect{
+    cursor: pointer;
+}
+.appointmentContainer{
+    
+   display: none;
+    background: linear-gradient(135deg, #7ebee5, #05175f);
+    height: 500px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 25px 30px;
+    justify-content: center;
+    align-items: center;
+}
+.appointmentContainer .appointHeadTxt{
+    color: #1207e2;
+    margin-right: 50px;
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.appointmentContainer .appointmentForm{
+   max-width: 400px;
+   width: 100%;
+   height: 60vh;
+   margin: auto;
+   border: 2px solid blanchedalmond;
+   display: flex;
+   flex-direction: column;
+   
+   padding-top: 10px;
+   background: #7ebee5;
+   box-sizing: border-box;
+   position: relative;
+}
+.appointmentContainer .formTxt{
+    text-align: center;
+    color: #2f07fa;
+    font-size: 25px;
+    width: 100%;
+    margin-left: 100px;
+}
+.appointmentContainer .appointInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 60px;
+    align-items: center;
+}
+.appointInputs input{
+    padding: 8px;
+    width: 90%;
+    max-width: 300px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.appointBtnDiv{
+    margin-top: 35 px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.appointBtnDiv button{
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 15px;
+    padding: 10px 20px;
+    background-color: #0f12ce;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    
+}
+.appointBtnDiv button:hover{
+    background-color: darkblue;
+}
+
+
+.genderOption{
+    display: flex;
+    gap: 20px;
+}
