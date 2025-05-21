@@ -9,10 +9,9 @@
             $this->userModel = new User();
         }
 
-        public function emploLogin($email, $password){
+        public function emploLogin($email, $password)
+        {
                 session_start();
-
-                
 
                 $user = $this->userModel->getUserByEmail($email);
 
@@ -22,23 +21,31 @@
                 }
 
                 $_SESSION['user_id'] = $user['EmployeeID'];
-                $_SESSION['user_name'] = $user['FirstName'];
+                $_SESSION['user_name'] = $user['FullName'];
 
                 http_response_code(200); 
                 header('Content-Type: application/json');
                 return json_encode([
                     'message' => 'Login Successfully',
-                    'user' => [
-                        'id' => $user['EmployeeID'],
-                        'FirstName' => $user['FirstName'],
-                        'LastName' => $user['LastName'],
-                        'Role' => $user['Role'],
-                        
-                    ]
+                    'user' => $user
                 ]);
         }
 
-        public function logout(){
+        public function register($name, $email, $password)
+        {
+            $user = $this->userModel->register($name, $email, $password);
+
+           http_response_code(200);
+           header('Content-Type : application/json');
+
+           return json_encode([
+                'message' => 'Registered Succesfully',
+                'user' => $user
+           ]);
+        }
+
+        public function logout()
+        {
             session_start();
             session_destroy();
 

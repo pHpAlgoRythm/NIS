@@ -5,9 +5,8 @@ require_once __DIR__ . '/../core/database.php';
 $conn = Database::getInstance()->getConnection();
 
 $sql = "CREATE TABLE IF NOT EXISTS Employees (
-    EmployeeID VARCHAR(10) PRIMARY KEY,  
-    FirstName VARCHAR(50) NOT NULL,
-    LastName VARCHAR(50) NOT NULL,
+    EmployeeID INT PRIMARY KEY AUTO_INCREMENT,  
+    FullName VARCHAR(50) NOT NULL,
     Role VARCHAR(50) NOT NULL,           
     Department VARCHAR(50),              
     ContactNumber VARCHAR(15),
